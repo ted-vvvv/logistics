@@ -102,7 +102,7 @@ Waits for this thread to die，如果join的线程不死亡，那么程序就会
     Conllections提供了供JAVA集合实用的静态方法
     
  
- # java中的基本类型和引用类型
+# java中的基本类型和引用类型
         8种基本类型 
         一、4种整型 
             byte      1字节           -128——127 
@@ -135,3 +135,16 @@ Waits for this thread to die，如果join的线程不死亡，那么程序就会
      MyDate a，b；                    //在内存开辟两个引用空间
      a  =  new MyDate（）；     //开辟MyDate对象的数据空间，并把该空间的首地址赋给a
      b  =  a；                               //将a存储空间中的地址写到b的存储空间中
+     
+# Java有 5种引用类型（对象类型）：类 接口 数组 枚举 标注  
+    引用类型：底层结构和基本类型差别较大   
+    JVM的内存空间：  
+    （1）. Heap 堆空间：分配对象 new Student（）   
+    （2）. Stack 栈空间：临时变量 Student stu  
+    （3）.Code 代码区 ：类的定义，静态资源 Student.class  
+    eg：Student stu = new Student（）； //new 在内存的堆空间创建对象  
+    stu.study(); //把对象的地址赋给stu引用变量  
+    上例实现步骤：  
+         a.JVM加载Student.class 到Code区   
+         b.new Student()在堆空间分配空间并创建一个Student实例  
+         c.将此实例的地址赋值给引用stu， 栈空间 
